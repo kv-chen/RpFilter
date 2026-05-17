@@ -1,5 +1,3 @@
-import "Dandiron.RpFilter.ColorUtils"
-
 EmoteColor = {}
 
 local MAX_NUM_PLAYERS = 12

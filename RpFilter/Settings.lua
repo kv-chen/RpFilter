@@ -1,8 +1,6 @@
 -- Modified from Cube's functions
 -- Color Picker class by Galuhad
 
-import "Dandiron.RpFilter.Location"
-
 local loadData = Turbine.PluginData.Load
 local saveData = Turbine.PluginData.Save
 local CharacterScope = Turbine.DataScope.Character

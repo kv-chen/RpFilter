@@ -1,8 +1,3 @@
-import "Dandiron.RpFilter.Contraction"
-import "Dandiron.RpFilter.TextUtils"
-import "Dandiron.RpFilter.EmoteColor"
-import "Dandiron.RpFilter.Logger"
-
 Emote = {}
 
 local multiDialogue = {}

@@ -1,7 +1,5 @@
 -- Assumption: user has Regional or OOC enabled
 
-import "Dandiron.RpFilter.TextUtils"
-
 Location = {}
 
 local currLocation = "unknown"

@@ -1,4 +1,3 @@
-
 -- Color Picker Class by Galuhad with some editing and changes by Garan -------------------
 --
 -- USAGE:

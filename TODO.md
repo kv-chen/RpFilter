@@ -1,7 +1,8 @@
 ### To-do
 
 - Nickname for characters via commands
-- Replace with Another Color Picker
+- Implement tests in plugin itself
+- Reorganize modules and folders
 
 ### Doing
 
@@ -9,6 +10,7 @@
 
 ### Done
 
+- Add __init__.lua files where appropriate
 - Fix incompatibility with other callbacks (add plugin to own apartment)
 - Take the version number from releases
 - Replace 'You' with player name

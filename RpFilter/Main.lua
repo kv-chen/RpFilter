@@ -1,12 +1,4 @@
-import "Dandiron.RpFilter.Callback"
-import "Dandiron.RpFilter.Location"
-import "Dandiron.RpFilter.Say"
-import "Dandiron.RpFilter.Emote"
-import "Dandiron.RpFilter.Settings"
-import "Dandiron.RpFilter.OptionsPanel"
-import "Dandiron.RpFilter.Logger"
-
-import "Turbine.Gameplay"
+import "Dandiron.RpFilter"
 
 LOCAL_PLAYER_NAME = Turbine.Gameplay.LocalPlayer:GetInstance():GetName()
 

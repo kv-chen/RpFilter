@@ -1,9 +1,3 @@
-import "Turbine.UI.Lotro"
-
-import "Dandiron.RpFilter.Settings"
-import "Dandiron.RpFilter.ColorPicker"
-import "Dandiron.RpFilter.TextUtils"
-
 local function createBackground(window)
     local background = Turbine.UI.Control()
     background:SetParent(window)

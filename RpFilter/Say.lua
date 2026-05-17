@@ -1,7 +1,3 @@
-import "Dandiron.RpFilter.Location"
-import "Dandiron.RpFilter.TextUtils"
-import "Dandiron.RpFilter.Logger"
-
 Say = {}
 
 local BLOCKED_NPCS = {
