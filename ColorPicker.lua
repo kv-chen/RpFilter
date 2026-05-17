@@ -17,7 +17,7 @@
 --------------------------------------------------------------------------------------------
 
 -- Set the picker.jpg location for your plugin, can be done within your code if you prefer.
-PICKER_JPG_DIR = "Dandiron/RpFilter/Resources/picker.jpg";
+PICKER_JPG_DIR = "RpFilter/Resources/picker.jpg";
 
 
 

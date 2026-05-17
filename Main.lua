@@ -1,4 +1,4 @@
-import "Dandiron.RpFilter"
+import "RpFilter"
 
 LOCAL_PLAYER_NAME = Turbine.Gameplay.LocalPlayer:GetInstance():GetName()
 

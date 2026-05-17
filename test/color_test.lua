@@ -1,6 +1,6 @@
 
-require "Dandiron.RpFilter.ColorUtils"
-require "Dandiron.RpFilter.TextUtils"
+require "RpFilter.ColorUtils"
+require "RpFilter.TextUtils"
 
 local L_VALUES = {0.1, 0.15, 0.5, 0.85, 0.9}
 local C_VALUES = {0.05, 0.06, 0.15, 0.29, 0.3}

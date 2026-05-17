@@ -1,6 +1,6 @@
 import = require
 
-require "Dandiron.RpFilter.Emote"
+require "RpFilter.Emote"
 
 local HORIZONTAL_RULE = "--------------------------------------------------------------------------------"
 

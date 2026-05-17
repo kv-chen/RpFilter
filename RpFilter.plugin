@@ -14,6 +14,6 @@ How to use:
 4. Relog
         </Description>
     </Information>
-    <Package>Dandiron.RpFilter.Main</Package>
+    <Package>RpFilter.Main</Package>
     <Configuration Apartment="RpFilter" />
 </Plugin>
