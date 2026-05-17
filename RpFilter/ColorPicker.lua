@@ -51,11 +51,11 @@ function ColorPicker.Create()
 
 	-- Converts a color number to hex. -------------------------------------------------
 	function DEC_HEX(IN)
-		local B,K,OUT,I,D=16,"0123456789ABCDEF","",0
+		local B,K,OUT,I,D=16,"0123456789ABCDEF","",0,nil
 			if IN == 0 then return "00" end;
 			while IN>0 do
 			I=I+1
-			IN,D=math.floor(IN/B),math.mod(IN,B)+1
+			IN,D=math.floor(IN/B),(IN%B)+1
 			OUT=string.sub(K,D,D)..OUT
 		end
 		if string.len(OUT) == 1 then OUT = "0" .. OUT end;
@@ -162,7 +162,7 @@ function ColorPicker.Create()
 		-- When the mouse moves over the control, update the preview box with the new color.
 
 		if args.X <= PICKERWIDTH then
-			mColor = wColorWin:GetColorFromCoord(args.X, args.Y)
+			local mColor = wColorWin:GetColorFromCoord(args.X, args.Y)
 			wColorPrev:SetBackColor(mColor);
 			wPrevCurs:SetBackColor(Turbine.UI.Color((1-mColor.R),(1-mColor.G),(1-mColor.B)));
 			wPrevCurs:SetPosition((Turbine.UI.Display.GetMouseX() - (wPrevCurs:GetWidth() / 2)), (Turbine.UI.Display.GetMouseY() - (wPrevCurs:GetHeight() / 2)));
@@ -185,7 +185,7 @@ function ColorPicker.Create()
 
 		-- Fire the color picked event..
 
-		colorString = wColorWin:GetColorFromCoord(args.X, args.Y)
+		local colorString = wColorWin:GetColorFromCoord(args.X, args.Y)
 
 			colRGB =
 			{
