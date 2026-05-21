@@ -108,7 +108,7 @@ function Settings.loadSync()
         deepcopy(DEFAULT_SETTINGS)
 
     loadSettings(data)
-    if data.location then Location.setCurrent(data.location) end
+    if data.location then Location.enter(data.location) end
 end
 
 function Settings.loadGlobalAsync(dataLoadHandler)
@@ -130,7 +130,7 @@ end
 
 function Settings.saveSync()
     local data = getData()
-    data.location = Location.getCurrent()
+    data.location = Location.current()
     saveData(CharacterScope, SETTINGS_FILE_NAME, data)
     print("RP Filter: saved settings")
 end

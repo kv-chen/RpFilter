@@ -1,14 +1,11 @@
 import "Turbine.Gameplay"
 import "Turbine.UI.Lotro"
 
--- Utils
-import "RpFilter.Callback"
-import "RpFilter.TextUtils"
-import "RpFilter.ColorUtils"
+import "RpFilter.Utils"
+import "RpFilter.State"
+import "RpFilter.Handlers"
 
 -- State
-import "RpFilter.Logger"
-import "RpFilter.Location"
 import "RpFilter.EmoteColor"
 
 -- Handlers

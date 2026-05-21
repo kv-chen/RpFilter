@@ -1,20 +1,20 @@
-Logger = {}
+_G.Log = {}
 
-local log = {}
+local messages = {}
 
-function Logger.log(message)
-    table.insert(log, message)
+function Log.add(msg)
+    table.insert(messages, msg)
 end
 
 local function replay()
-    if #log == 0 then
+    if #messages == 0 then
         print("Nothing to replay yet!")
     else
-        for _, message in ipairs(log) do print(message) end
+        for _, msg in ipairs(messages) do print(msg) end
     end
 end
 
-local replayCmd = Turbine and Turbine.ShellCommand() or {}
+local replayCmd = Turbine.ShellCommand()
 function replayCmd:Execute() replay() end
 function replayCmd:GetShortHelp() return "Prints all says and emotes from this session." end
 function replayCmd:GetHelp()
@@ -23,4 +23,4 @@ function replayCmd:GetHelp()
         .. "so make sure to grab logs first. Once you're done with RP,\n"
         .. "1. Start logging your RP tab\n2. Use /replay\n3. Stop logging"
 end
-Logger.replay = replayCmd
+Log.replay = replayCmd

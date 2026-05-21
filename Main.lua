@@ -23,7 +23,7 @@ local function chatParser(_, args)
     local message, channel = args.Message, args.ChatType
 
     if channel == ChatType.Standard then
-        Location.update(message)
+        handleLocation(message)
     elseif channel == ChatType.Say and Say.isAllowed(message) then
         Say.print(message, Settings.getSayColor())
     elseif channel == ChatType.Emote then
@@ -32,10 +32,10 @@ local function chatParser(_, args)
     end
 end
 
-function plugin.Load(_, _)
+function plugin.Load(_)
     Settings.loadSync()
-    Callback.add(Turbine.Chat, "Received", chatParser)
-    Turbine.Shell.AddCommand("replay", Logger.replay)
+    AddCallback(Turbine.Chat, "Received", chatParser)
+    Turbine.Shell.AddCommand("replay", Log.replay)
 
     DrawOptionsPanel(Settings.getOptions())
 
@@ -46,8 +46,8 @@ function plugin.Load(_, _)
     print("For easy logging, use /replay to print all previous says and emotes")
 end
 
-function plugin.Unload(_, _)
+function plugin.Unload(_)
     Settings.saveSync()
-    Callback.remove(Turbine.Chat, "Received", chatParser)
-    Turbine.Shell.RemoveCommand(Logger.replay)
+    RemoveCallback(Turbine.Chat, "Received", chatParser)
+    Turbine.Shell.RemoveCommand(Log.replay)
 end

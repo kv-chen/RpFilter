@@ -121,7 +121,7 @@ end
 
 local function isNpcAllowed(name)
     if name == nil then return false end
-    local blockedNpcs = BLOCKED_NPCS[Location.getCurrent()]
+    local blockedNpcs = BLOCKED_NPCS[Location.current()]
     return Location.isInstanced() or not blockedNpcs or not blockedNpcs[name]
 end
 
@@ -183,7 +183,7 @@ function Say.print(say, color)
 
     if isFromPlayer(id, name) then
         Emote.updatePlayer(name)
-        Logger.log(formatted)
+        Log.add(formatted)
     elseif isFromNpc(id) then
         name = ""
     end

@@ -91,13 +91,13 @@ end
 
 ---@param color {red: number, green: number, blue: number}
 ---@return {L: number, C: number, h: number}
-function RgbToOklch(color)
+function _G.RgbToOklch(color)
     return ComposeFuncs(color, rgbToLinear, linearToOklab, oklabToOklch)
 end
 
 ---@param color {L: number, C: number, h: number}
 ---@return {r: number, g: number, b: number}
-function OklchToRgb(color)
+function _G.OklchToRgb(color)
     return ComposeFuncs(color, oklchToOklab, oklabToLinear, linearToRgb)
 end
 
@@ -108,7 +108,7 @@ end
 ---@param color {red: number, green: number, blue: number}
 ---@param hueShift number
 ---@return {red: number, green: number, blue: number}
-function AdjustContrast(color, hueShift)
+function _G.AdjustContrast(color, hueShift)
     local oklch = RgbToOklch({r = color.red, g = color.green, b = color.blue})
 
     -- y = pi/2 * cos(x + 5/6*pi) + pi/2 where x is hue in radians, y a measure of coolness
@@ -134,7 +134,7 @@ end
 ---@param color {red: number, green: number, blue: number}
 ---@param shiftFactor number
 ---@return {red: number, green: number, blue: number}
-function AdjustRainbow(color, shiftFactor)
+function _G.AdjustRainbow(color, shiftFactor)
     local oklch = RgbToOklch({r = color.red, g = color.green, b = color.blue})
     local pi, floor, cos = math.pi, math.floor, math.cos
 

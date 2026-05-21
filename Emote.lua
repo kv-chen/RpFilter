@@ -226,6 +226,6 @@ function Emote.print(emote, emoteColor, sayColor, options)
     local name = parseName(emote)
     local formatted = format(emote, name, emoteColor, sayColor, options)
 
-    Logger.log(formatted)
+    Log.add(formatted)
     print(formatted, name)
 end
